@@ -63,8 +63,9 @@ export default class Header extends React.Component
                         a type specimen book.
                     </p>
                 </div>
-                <Laptop className="laptop" />
                 {/* <img src={laptop} className="laptop" alt="Computer" /> */}
+                {/* <object className="laptop" data={laptop}></object> */}
+                <Laptop className="laptop" />
             </div>
 
         );

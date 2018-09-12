@@ -6,8 +6,8 @@ export default class Laptop extends React.Component
     render()
     {
         return (
-            <div style={this.props.style} className={this.props.className}><svg width={814} height={625} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                {/* <div style={this.props.style} className={this.props.className}><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"> */}
+            // <div style={this.props.style} className={this.props.className}><svg width={514} height={625} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <div style={this.props.style} className={this.props.className}><svg viewBox="0 0 614 625" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                 <defs>
                     <path d="M163.956495 3.6489823L4.24453608 95.8168142c-.71570103.4107079-1.14015464 1.1486283-1.14015464 1.9700442 0 .8236726.42445361 1.5638496 1.14015464 1.9768142L262.26266 248.656593c6.387124 3.687345 14.325309 3.689602 20.712433 0l149.358-86.19c.713443-.410708 1.140154-1.148628 1.140154-1.974558 0-.821416-.426711-1.559336-1.140154-1.970044L163.956495 3.6489823zM272.618876 253.855885c-4.002958 0-8.005917-1.031283-11.575391-3.089336L3.02536082 101.873628c-1.4765567-.855265-2.3593299-2.3807519-2.35707216-4.0867696 0-1.7037611.88051546-3.2269911 2.35707216-4.08L163.956495.83721239l.611845.3520354L433.552268 156.412035c1.474299.853009 2.357072 2.376239 2.357072 4.08s-.882773 3.231505-2.357072 4.084514l-149.358 86.187743c-3.569474 2.06031-7.572433 3.091593-11.575392 3.091593z" id="path-1" />
                     <linearGradient x1="100%" y1="50%" x2="9.9e-7%" y2="50%" id="linearGradient-3">
@@ -1256,8 +1256,8 @@ export default class Laptop extends React.Component
                         </g>
                     </g>
                 </g>
-            </svg>
-            </div>
+            </svg >
+            </div >
         );
     };
 }
