@@ -1,0 +1,36 @@
+#Code {
+        animation: float 4s infinite ease-in-out;
+    }
+
+@keyframes float {
+    0% {
+        transform: translate(227px, 10px);
+    }
+
+    50% {
+        transform: translate(227px, 0px);
+    }
+
+    100% {
+        transform: translate(227px, 10px);
+    }
+}
+
+#bottom {
+    animation: floatb 4s infinite ease-in-out;
+    /* translate(18.000000, 371.000000) */
+}
+
+@keyframes floatb {
+    0% {
+        transform: translate(18px, 361px);
+    }
+
+    50% {
+        transform: translate(18px, 371px);
+    }
+
+    100% {
+        transform: translate(18px, 361px);
+    }
+}
