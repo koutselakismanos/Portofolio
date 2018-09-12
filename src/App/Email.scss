@@ -1,0 +1,106 @@
+$color1: rgba(25, 31, 37, 1);
+$color2: rgba(93, 176, 112, 1);
+$color3: rgba(36, 206, 218, 1);
+$color4: rgba(68, 152, 255, 1);
+$color5: rgba(241, 191, 108, 1);
+$color6: rgba(219, 81, 102, 1);
+$color7: rgba(184, 42, 100, 1);
+$color8: rgba(187, 193, 208, 1);
+$color9: rgba(148, 167, 203, 1);
+
+
+// body{
+//     // margin: 0;
+//     // padding: 0;
+//     // background-size: cover;
+//     // background: $color1;
+//     // background-repeat:no-repeat;
+//     // background: linear-gradient( to left top, blue, red);
+//     // background-image: linear-gradient(0deg, $color1, lighten($color1, 50));
+// }
+
+.background-box{
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    box-shadow: 0px 0px 32px rgba(0,0,0,0.5);
+
+    // .blur-box{
+    //     // background-image: linear-gradient(lighten($color1, 5), $color1);
+    //     width: 500px;
+    //     height: 500px;
+    //     border-radius: 4px;
+    //     box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+    //     position: absolute;
+    //     top: 40px;
+    //     left: 100px;
+    //     z-index: 20;
+    //     -webkit-filter: blur(4px);
+    //     -moz-filter: blur(4px);
+    //     -ms-filter: blur(4px);
+    //     -o-filter: blur(4px);
+    //     filter: blur(4px);
+    // }
+}
+
+.mtk17, .mtk15, .mtk14, .mtk7, .mtk9, .mtk4, .mtk3, .mtk10{
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    // filter: blur(2px);
+}
+.mtk17 {
+    color: #718ca1;
+}
+.mtk15 {
+    color: #b7c5d3;
+}
+.mtk14 {
+    color: #5ec4ff;
+}
+.mtk7 {
+    color: #70e1e8;
+}
+.mtk9 {
+    color: #008b94;
+}
+.mtk4 {
+    color: #e27e8d;
+}
+.mtk3 {
+    color: #41505e;
+}
+.mtk10 {
+    color: #68a1f0;
+}
+
+.meow{
+    background-image: linear-gradient(blue, yellow);
+    width: 800px;
+    height: 800px;
+    position: fixed;
+    top: 500px;
+    background: url('https://images.unsplash.com/photo-1486723312829-f32b4a25211b?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(13px);
+    position: absolute;
+    opacity: 0.5;
+}
+
+// html {
+//     // background-size: cover;
+//     // background: #70bg32;
+//     // background-repeat:no-repeat;
+//     background: -webkit-linear-gradient( to left top, blue, red);
+//     background: -moz-linear-gradient( to left top, blue, red);
+//     background: -ms-linear-gradient( to left top, blue, red);
+//     background: -o-linear-gradient( to left top, blue, red);
+//     background: linear-gradient( to left top, blue, red);
+// }
+
+// .loading-background{
+//     background: linear-gradient(0deg, $color1, lighten($color1, 50));
+//     width: 2000px;
+//     height: 1200px;
+// }
