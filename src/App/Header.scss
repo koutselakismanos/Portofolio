@@ -20,7 +20,7 @@ $color10: rgb(26, 46, 68);
     position: fixed;
     left: 0;
     top: 0;
-    // background: linear-gradient($color10, darken($color10,100) 94%);
+    // background: linear-gradient(lighten($color10,2), darken($color10,100) 94%);
     background-color: $color1;
 
     .header{
@@ -35,19 +35,40 @@ $color10: rgb(26, 46, 68);
     .header-text{
         color: $color3;
         font-family: 'Courier New', Courier, monospace;
-        font-size: 30px;
+        font-size: 38px;
         position: relative;
         top: 30%;
-        left: 10%;
+        left: 8%;
         white-space: pre-wrap;
     }
 
 
     .cursor{
-        background-color: red;
-        width: 20;
-        height: 20;
+        background-color: $color8;
+        width: 2px;
+        height: 30px;
+        top: 0;
+        left: 0;
+        position: relative;
+        display: inline-block;
+        margin-left: 3px;
+        animation: blink 1s infinite step-end;
     }
+
+    @keyframes blink {
+        0%{
+
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+
     .header-paragraph-inactive{
         opacity: 0;
     }
@@ -60,21 +81,60 @@ $color10: rgb(26, 46, 68);
         position: relative;
         width: 600px;
         top: 30%;
-        left: 10%;
+        left: 8%;
 
         p{
             word-wrap:break-word;
         }
     }
 
-
 }
 
 .laptop{
     position: absolute;
-    height: 75%;
+    height: 80%;
     top:55%;
-    left: 70%;
+    left: 80%;
     transform: translate(-50%, -50%);
     z-index: -5;
+    animation: meow 12s forwards;
 }
+
+@keyframes meow{
+    0%{
+        opacity:0 ;
+    }
+    100%{
+        opacity:1 ;
+    }
+}
+
+//FIXME: FOOTER DOESNT WORK PROPERLY, WORK ON THIS LATER
+// .footer{
+//     // background-color: #13191e;
+//     // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23212a32' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+//     // width: 100%;
+//     // height: 50px;
+//     position: absolute;
+//     bottom: 0px;
+//     left: 0px;
+//     // color: yellow;
+//     // background-color: red;
+//     // width: 200%;
+//     // height: 200%;
+//     // width: 100%;
+// }
+// ---------------------------------------------------
+// .footer:before{
+//         content: "";
+//         position: absolute;
+//         width: 200%;
+//         height: 200%;
+//         top: -50%;
+//         left: -50%;
+//         z-index: -1;
+//         background-color: #13191e;
+//         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23212a32' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+//         // -webkit-transform: rotate(90deg);
+//         transform: rotate(-90deg);
+// }

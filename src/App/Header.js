@@ -50,8 +50,8 @@ export default class Header extends React.Component
                 </div>
                 <div className="header-text">
                     {this.state.final}
+                    <div className="cursor"></div>
                 </div>
-                <div className="cursor"></div>
                 <div className={this.state.paragraphClass}>
                     <p>
                         Lorem Ipsum is simply dummy text of
@@ -63,9 +63,8 @@ export default class Header extends React.Component
                         a type specimen book.
                     </p>
                 </div>
-                {/* <img src={laptop} className="laptop" alt="Computer" /> */}
-                {/* <object className="laptop" data={laptop}></object> */}
                 <Laptop className="laptop" />
+                {/* <div className="footer">meow</div> */}
             </div>
 
         );

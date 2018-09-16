@@ -4,7 +4,7 @@ svg{
 
 
 #Code {
-        animation: float 4s infinite ease-in-out;
+        animation: float 5s infinite ease-in-out;
     }
 
 @keyframes float {
@@ -22,20 +22,20 @@ svg{
 }
 
 #bottom {
-    animation: floatb 4s infinite ease-in-out;
+    animation: floatb 5s infinite ease-in-out;
     /* translate(18.000000, 371.000000) */
 }
 
 @keyframes floatb {
     0% {
-        transform: translate(18px, 361px);
-    }
-
-    50% {
         transform: translate(18px, 371px);
     }
 
-    100% {
+    50% {
         transform: translate(18px, 361px);
+    }
+
+    100% {
+        transform: translate(18px, 371px);
     }
 }
