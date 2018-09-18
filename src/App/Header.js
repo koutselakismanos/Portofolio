@@ -45,9 +45,7 @@ export default class Header extends React.Component
     {
         return (
             <div className="header-background">
-                <div className="header">
-
-                </div>
+                <div className="header"></div>
                 <div className="header-text">
                     {this.state.final}
                     <div className="cursor"></div>
