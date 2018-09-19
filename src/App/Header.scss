@@ -10,6 +10,11 @@ $color9: rgba(148, 167, 203, 1);
 $color10: rgb(26, 46, 68);
 
 
+@font-face{
+    font-family: monaco;
+    src: url(../fonts/monaco.ttf);
+}
+
 ::selection{
     color: $color3;
 }
@@ -17,7 +22,9 @@ $color10: rgb(26, 46, 68);
 body{
     background-color: #13191e;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%23212a32' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family: sans-serif;
 }
+
 .header-background{
     width: 100%;
     height: 100%;
@@ -25,25 +32,73 @@ body{
     left: 50%;
     top: 0;
     // background: linear-gradient(lighten($color10,2), darken($color10,100) 94%);
-    background-color: $color1;
+    background-color: #0F1921;
     max-width: 1600px;
     transform: translate(-50%, 0);
     box-shadow: 0px 0px 35px 10px rgba(0,0,0,0.5);
 
 
     .header{
-        background-color: rgba(0,0,0,0);
+        background-color: #181F26;
         width: 100%;
-        height: 7%;
-        min-height: 50px;
-        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        height: 45px;
+        box-shadow: 0px 2px 15px #000000;
+        position: fixed;
+        border-radius: 2px;
+
+        .buttons{
+            display: inline-block;
+            margin-top: 15px; 
+            margin-left: 30px;
+
+
+            .close,.minimize,.expand{
+                width:12px;
+                height: 12px;
+                display: inline-block;
+                // position: relative;
+                border-radius: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .close{
+                background-color: #D95368;
+                margin-right: 4px;
+            }
+
+            .minimize{
+                background-color: #F0BE72;
+                margin: 0px 4px;
+            }
+            .expand{
+                background-color: #60AF73;
+                margin-left:4px;
+            }
+        }
+
+        .navbar{
+            display: inline-block;
+            padding-left: 67px;
+            a{
+                padding: 9px  11px;
+                text-decoration: none;
+                color: white;
+            }
+
+            a.home{
+                border-bottom: 2px solid white;
+            }
+
+        }
     }
 
 
     .header-text{
         color: $color3;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 38px;
+        // font-family: 'Courier New', Courier, monospace;
+        font-family: monaco;
+        font-size: 37px;
         position: relative;
         top: 30%;
         left: 8%;
@@ -100,12 +155,24 @@ body{
 
 .laptop{
     position: absolute;
-    height: 70%;
+    height: 50%;
     top:55%;
     left: 75%;
     transform: translate(-50%, -50%);
     z-index: -5;
     animation: meow 12s forwards;
+}
+
+.line-numbers{
+    width:18px;
+    color: $color9;
+    opacity: 0.5;
+    margin-top: 50px;
+    position: absolute;
+    line-height: 38px;
+    font-size: 15px;
+    margin-left: 18px;
+    font-family: monaco;
 }
 
 
@@ -124,7 +191,7 @@ body{
 //     // height: 200%;
 //     // width: 100%;
 // }
-// ---------------------------------------------------
+// // ---------------------------------------------------
 // .footer:before{
 //         content: "";
 //         position: absolute;
