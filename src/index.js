@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import Header from './App/Header';
-// import Circuit from './App/Circuit';
-// import Loading from './App/Loading';
+import App from './App/App'
 import './index.scss'
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
