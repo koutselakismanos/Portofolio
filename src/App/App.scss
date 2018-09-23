@@ -49,16 +49,16 @@ $color10: rgb(26, 46, 68);
             }
 
             .close{
-                background-color: #D95368;
+                background-color: $color6;
                 margin-right: 4px;
             }
 
             .minimize{
-                background-color: #F0BE72;
+                background-color: $color5;
                 margin: 0px 4px;
             }
             .expand{
-                background-color: #60AF73;
+                background-color: $color2;
                 margin-left:4px;
             }
         }
@@ -71,11 +71,20 @@ $color10: rgb(26, 46, 68);
                 padding: 9px  15px;
                 text-decoration: none;
                 color: white;
+                transition: 0.2s;
+                border-bottom: 2px solid rgba(0,0,0,0);
+
             }
 
             a.home{
                 border-bottom: 2px solid white;
             }
+
+            a:hover{
+                border-bottom: 2px solid $color3;
+                color: $color3;
+            }
+
         }
 
         .navbar-right{
@@ -89,7 +98,13 @@ $color10: rgb(26, 46, 68);
                 padding: 17px 15px 13px;
                 text-decoration: none;
                 color: white;
+                transition: 0.3s;
             }
+
+            a:hover{
+                background-color: $color7;
+            }
+
         }
     }
 
