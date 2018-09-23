@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from './Home'
-import './App.scss'
-import { BrowseRouter as Router } from 'react-router-dom'
+import Home from './Home';
+import './App.scss';
+// import { BrowseRouter as Router } from 'react-router-dom'
 
 function Header()
 {

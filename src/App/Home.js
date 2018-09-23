@@ -36,7 +36,8 @@ export default class Header extends React.Component
     {
         setTimeout(function ()
         {
-            this.typeWriter("Hi, i'm Manos;\nI'm a Full-Stack Web Developer;", 0);
+            // this.typeWriter("Hi, i'm Manos;\nI'm a Full-Stack Web Developer;", 0);
+            this.typeWriter("Hi, i'm Manos;\nI'm a Web Developer;", 0);
         }.bind(this), 300);
     }
 
