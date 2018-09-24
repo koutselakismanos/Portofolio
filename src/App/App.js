@@ -1,10 +1,14 @@
 import React from 'react';
-import Home from './Home';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
-// import { BrowseRouter as Router } from 'react-router-dom'
 
-function Header()
-{
+import Home from './Home';
+import Skills from "./Skills";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import Email from "./Email";
+
+const Header = () => {
     return (
         <div className="header">
             <div className="buttons">
@@ -13,9 +17,9 @@ function Header()
                 <div className="expand"></div>
             </div>
             <nav className="navbar">
-                <a className="home" href="/home">Home</a>
+                <a className="home" href="/">Home</a>
                 <a className="skills" href="/skills">Skills</a>
-                <a className="portofolio" href="/portofolio">Portofolio</a>
+                <a className="portfolio" href="/portfolio">Portfolio</a>
             </nav>
             <nav className="navbar-right">
                 <a className="contact" href="/contact">Contact</a>
@@ -29,15 +33,20 @@ function Header()
     );
 }
 
-export default class App extends React.Component
-{
-    render()
-    {
+export default class App extends React.Component {
+    render() {
         return (
-            <div className="main">
-                <Header />
-                <Home />
-            </div>
+            <BrowserRouter>
+                <div className="main">
+                    <Header />
+                    <Switch>
+                        <Route path="/" component={Home} exact />
+                        <Route path="/skills" component={Email} exact />
+                        <Route path="/portfolio" component={Portfolio} exact />
+                        <Route path="/contact" component={Email} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
         );
     };
 }
