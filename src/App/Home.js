@@ -2,10 +2,8 @@ import React from 'react';
 import './Home.scss';
 import Laptop from './Laptop';
 
-export default class Header extends React.Component
-{
-    constructor(props)
-    {
+export default class Header extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             final: '',
@@ -14,17 +12,14 @@ export default class Header extends React.Component
         this.typeWriter = this.typeWriter.bind(this);
     };
 
-    typeWriter(text, n)
-    {
-        if (n < text.length)
-        {
+    typeWriter(text, n) {
+        if (n < text.length) {
             let k = text.substring(0, n + 1);
             n++;
             this.setState({ final: k });
             setTimeout(() => { this.typeWriter(text, n) }, 50);
         }
-        else
-        {
+        else {
             this.setState({
                 paragraphClass: 'header-paragraph'
             });;
@@ -32,17 +27,20 @@ export default class Header extends React.Component
     }
 
 
-    componentDidMount()
-    {
-        setTimeout(function ()
-        {
-            // this.typeWriter("Hi, i'm Manos;\nI'm a Full-Stack Web Developer;", 0);
+    componentDidMount() {
+        this.loadInterval = setInterval(this.loadSearches, this.props.pollInterval);
+
+        setTimeout(function () {
             this.typeWriter("Hi, i'm Manos;\nI'm a Web Developer;", 0);
         }.bind(this), 300);
     }
 
-    render()
-    {
+    componentWillUnmount() {
+        this.loadInterval && clearInterval(this.loadInterval);
+        this.loadInterval = false;
+    }
+
+    render() {
         return (
             <div className="home-main">
                 <div className="header-text">

@@ -1,14 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import './App.scss';
+
 
 import Home from './Home';
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
-import Contact from "./Contact";
+// import Contact from "./Contact";
 import Email from "./Email";
 
 const Header = () => {
+
     return (
         <div className="header">
             <div className="buttons">
@@ -17,12 +19,12 @@ const Header = () => {
                 <div className="expand"></div>
             </div>
             <nav className="navbar">
-                <a className="home" href="/">Home</a>
-                <a className="skills" href="/skills">Skills</a>
-                <a className="portfolio" href="/portfolio">Portfolio</a>
+                <NavLink className="home" activeClassName="active" exact to="/">Home</NavLink>
+                <NavLink className="skills" activeClassName="active" exact to="/skills">Skills</NavLink>
+                <NavLink className="portfolio" activeClassName="active" exact to="/portfolio">Portfolio</NavLink>
             </nav>
             <nav className="navbar-right">
-                <a className="contact" href="/contact">Contact</a>
+                <NavLink className="contact" exact to="/contact">Contact</NavLink>
             </nav>
             <div className="line-numbers">
                 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
@@ -33,6 +35,7 @@ const Header = () => {
     );
 }
 
+
 export default class App extends React.Component {
     render() {
         return (
@@ -41,9 +44,9 @@ export default class App extends React.Component {
                     <Header />
                     <Switch>
                         <Route path="/" component={Home} exact />
-                        <Route path="/skills" component={Email} exact />
+                        <Route path="/skills" component={Skills} exact />
                         <Route path="/portfolio" component={Portfolio} exact />
-                        <Route path="/contact" component={Email} />
+                        <Route path="/contact" component={Email} exact />
                     </Switch>
                 </div>
             </BrowserRouter>

@@ -73,12 +73,11 @@ $color10: rgb(26, 46, 68);
                 color: white;
                 transition: 0.2s;
                 border-bottom: 2px solid rgba(0,0,0,0);
-
             }
 
-            a.home{
-                border-bottom: 2px solid white;
-            }
+                .active{
+                    border-bottom: 2px solid white;
+                }
 
             a:hover{
                 border-bottom: 2px solid $color3;
@@ -120,3 +119,4 @@ $color10: rgb(26, 46, 68);
         font-family: monaco;
     }
 }
+
