@@ -51,32 +51,49 @@ $color9: rgba(148, 167, 203, 1);
     font-family: monaco;
     font-weight: 100;
     font-size: 16px;
+    transition: 2s;
+    // opacity: 1;
     // filter: blur(0px);
-    opacity: 1;
+    opacity: 0.5;
+    filter: blur(3px);
 }
 .mtk17 {
     color: #718ca1;
 }
 .mtk15 {
     color: #b7c5d3;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk14 {
     color: #5ec4ff;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk7 {
     color: #70e1e8;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk9 {
     color: #008b94;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk4 {
     color: #e27e8d;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk3 {
     color: #41505e;
+    filter: blur(0px);
+    opacity: 1;
 }
 .mtk10 {
     color: #68a1f0;
+    filter: blur(0px);
+    opacity: 1;
 }
 
 // .meow{

@@ -30,6 +30,11 @@ const Header = () => {
 
 
 export default class App extends React.Component {
+
+    componentDidMount() {
+        document.title = 'Koutselakis Manos';
+    }
+
     render() {
         return (
             <BrowserRouter>
