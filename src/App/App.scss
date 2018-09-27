@@ -71,17 +71,36 @@ $color10: rgb(26, 46, 68);
                 padding: 9px  15px;
                 text-decoration: none;
                 color: white;
-                transition: 0.2s;
+                transition: 0.5s;
                 border-bottom: 2px solid rgba(0,0,0,0);
             }
 
-                .active{
-                    border-bottom: 2px solid white;
-                }
+            .active{
+                border-bottom: 2px solid white;
+            }
 
-            a:hover{
+            .blue:hover
+            {
                 border-bottom: 2px solid $color3;
-                color: $color3;
+                // color: $color3;
+            }
+
+            .green:hover
+            {
+                border-bottom: 2px solid $color2;
+                // color: $color2;
+            }
+
+            .yellow:hover
+            {
+                border-bottom: 2px solid $color5;
+                // color: $color5;
+            }
+
+            .red:hover
+            {
+                border-bottom: 2px solid $color6;
+                // color: $color6;
             }
 
         }
