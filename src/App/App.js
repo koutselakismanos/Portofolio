@@ -22,17 +22,14 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
-      <div className="buttons">
-        <div className="close"></div>
-        <div className="minimize"></div>
-        <div className="expand"></div>
+    <React.Fragment>
+      <div className="header">
+        <Links />
       </div>
-      <Links />
       <div className="line-numbers">
-        {renderNumbers(window.innerHeight)}
+        {false && renderNumbers(window.innerHeight)}
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
@@ -100,6 +97,11 @@ class Links extends React.Component {
     return (
       <React.Fragment>
         <nav className="navbar">
+          <div className="buttons">
+            <div className="close"></div>
+            <div className="minimize"></div>
+            <div className="expand"></div>
+          </div>
           <NavLink onClick={() => this.onClick('blue')} className={['home', this.state.class].join(' ')} colo="red" activeClassName="active" exact to="/">Home</NavLink>
           <NavLink onClick={() => this.onClick('yellow')} className={['home', this.state.class].join(' ')} colo="blue" activeClassName="active" exact to="/skills">Skills</NavLink>
           <NavLink onClick={() => this.onClick('green')} className={['home', this.state.class].join(' ')} colo="yellow" activeClassName="active" exact to="/portfolio">Portfolio</NavLink>
@@ -107,7 +109,7 @@ class Links extends React.Component {
         <nav className="navbar-right">
           <NavLink onClick={() => this.onClick('red')} className="contact" exact to="/contact">Contact</NavLink>
         </nav>
-      </React.Fragment>
+      </React.Fragment >
     )
   };
 
